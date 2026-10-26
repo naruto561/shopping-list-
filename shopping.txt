@@ -1,0 +1,29 @@
+
+# Step 1: Create a text file and write a shopping list
+file = open("shopping.txt", "w")
+file.write("Apples\n")
+file.write("Bread\n")
+file.write("Milk\n")
+file.close()
+
+# Step 2: Read the complete file
+file = open("shopping.txt", "r")
+print("Original shopping list:")
+print(file.read())
+file.close()
+
+# Step 3: Append new items to the file
+file = open("shopping.txt", "a")
+file.write("Eggs\n")
+file.write("Cheese\n")
+file.close()
+
+# Step 4: Read the updated file line by line
+file = open("shopping.txt", "r")
+print("Updated shopping list:")
+
+for line in file:
+    print(line.strip())
+
+file.close()
+    
